@@ -1,0 +1,241 @@
+NOODLES
+
+Veg Noodles (109/-)
+Paneer Noodles (139/-)
+Chicken Noodles (149/-)
+
+CHINESE
+
+Spring Roll (119/-)
+Veg Manchurian (119/-)
+Honey Chilly Potato (119/-)
+Crispy Chilly Potato (129/-)
+Cheese Chilly (169/-)
+
+FRIED RICE BOWL
+
+Corn Rice Bowl (99/-)
+Nugget Rice Bowl (99/-)
+Mushroom Rice Bowl (99/-)
+Paneer Rice Bowl (99/-)
+Szehezwen Rice Bowl (109/-)
+
+MAGGI
+
+Plain Maggi (49/-)
+Masala Maggi (59/-)
+Cheese Maggi (69/-)
+
+MOCKAILS
+
+Lemon Masala Soda (79/-)
+Green Apple Soda (99/-)
+Virgin Mojito (99/-)
+Watermelon Mojito (99/-)
+Blue Lagoon (99/-)
+Strawberry Mojito (99/-)
+
+BREAKFAST
+
+Parantha (Aloo, Gobi, Onion) (49/-)
+Paneer Parantha (59/-)
+Mix Parantha (59/-)
+Chana Puri (79/-)
+Chana Bhatura (89/-)
+
+TANDOORI SNACKS
+
+Chilly Chicken (Boneless) (169/-)
+Chilly Chicken (with Bone) (199/-)
+Chicken Lollipop (199/-)
+Lemon Chicken (209/-)
+Chefs Spl. Chicken Gravy (219/-)
+
+PANEER SPECIAL
+
+Shahi Paneer (139/-)
+Kadahi Paneer (139/-)
+Matter Paneer (139/-)
+Palak Paneer (139/-)
+Paneer Butter Masala (139/-)
+
+MAIN COURSE
+
+Yellow Dal Tadka (89/-)
+Mix Veg. (99/-)
+Aloo Jeera (99/-)
+Kadhi Pakora (99/-)
+Chana Masala (99/-)
+Malai Champ (99/-)
+Soya Champ (99/-)
+Dal Makhani (109/-)
+Rajma (109/-)
+Mushroom Matter (119/-)
+Kadahi Mushroom (119/-)
+
+NON-VEG MAIN COURSE
+
+Egg Curry (99/-)
+Chicken Do Pyaza (199/-)
+Butter Chicken (199/-)
+Boneless Butter Chicken (209/-)
+Chicken Tikka Masala (209/-)
+Kadai Chicken Bonless (199/-)
+Kadai Chicken (209/-)
+Chicken Korma (219/-)
+Bara Chicken (229/-)
+
+RICE BOWL
+
+Plan Rice (69/-)
+Jeera Rice (69/-)
+Paneer Rice (79/-)
+Rajma Rice (79/-)
+Kadhi Rice (79/-)
+Veg Pulao (79/-)
+
+TAWA SE
+
+Roti (10/-)
+Butter Roti (20/-)
+Plan Parantha (30/-)
+
+SALAD & RAITA
+
+Boondi Raita (69/-)
+Mix Raita (69/-)
+Green Salad (69/-)
+
+SHAKES
+
+Vanilla Shake (69/-)
+Pine Apple (79/-)
+Strawberry (99/-)
+Blueberry (99/-)
+Chocolate (99/-)
+Oreo Shake (119/-)
+Kitkat (119/-)
+
+PIZZA SECTION (Single, Double, Veg, and Non-Veg)
+Single Pizza:
+
+Onion Pizza (69/-)
+Capsicum Pizza (79/-)
+Sweet Corn Pizza (79/-)
+Tomato Pizza (79/-)
+Olive Pizza (89/-)
+Paneer Pizza (99/-)
+
+Double Pizza:
+
+Onion & Capsicum Pizza (89/-)
+Onion Corn Pizza (89/-)
+Onion Jalapeno Pizza (99/-)
+Corn Tomato Pizza (89/-)
+Corn Paneer Pizza (99/-)
+Paneer & Capsicum Pizza (109/-)
+Jalapeno Pineapple Pizza (109/-)
+
+Veg Pizza (Small/Medium/Large prices):
+
+Margherita Pizza (99/-, 155/-, 259/-)
+Garden Delight Pizza (99/-, 209/-, 309/-)
+Loverbite Pizza (99/-, 199/-, 309/-)
+Veg. Hawaiian Pizza (119/-, 219/-, 319/-)
+Cheese & Tomato Pizza (129/-, 209/-, 319/-)
+Double Cheese Margherita Pizza (129/-, 209/-, 319/-)
+Cheese & Mushroom Pizza (129/-, 209/-, 319/-)
+Farmhouse Pizza (149/-, 259/-, 339/-)
+Spicy Achari Pizza (169/-, 279/-, 369/-)
+Veggie Feast Pizza (169/-, 279/-, 369/-)
+Fire In Hole Veg Pizza (169/-, 279/-, 369/-)
+Peri Peri Veg Pizza (179/-, 289/-, 379/-)
+English Veggie Pizza (179/-, 289/-, 389/-)
+Paneer Makhani Pizza (189/-, 309/-, 389/-)
+Mexican Style Veg Pizza (199/-, 309/-, 399/-)
+Love Affairs Veg. Pizza (209/-, 319/-, 409/-)
+Veg Delux Pizza (209/-, 319/-, 429/-)
+The Friends Overloaded Pizza (209/-, 329/-, 439/-)
+
+Non-Veg Pizza (Small/Medium/Large prices):
+
+Classic Chicken Pizza (109/-, 219/-, 269/-)
+Hawaiian Pizza (109/-, 219/-, 279/-)
+Peri Peri Chicken Pizza (109/-, 189/-, 299/-)
+Smoky Spicy Chicken Pizza (119/-, 209/-, 299/-)
+BBQ Chicken Pizza (119/-, 189/-, 319/-)
+Italian Style Pizza (129/-, 209/-, 339/-)
+Exotic Chicken Pizza (139/-, 219/-, 349/-)
+Pepperoni Lover Pizza (149/-, 279/-, 369/-)
+The Overload Non Veg Pizza (179/-, 299/-, 479/-)
+
+PASTA
+
+Veg Pasta (149/-)
+Mix Veg Pasta (169/-)
+Chicken Pasta (199/-)
+Mix Chicken Pasta (219/-)
+
+GRILLED SANDWICH
+
+Veggie Sandwich (99/-)
+Mushroom & Cheese Sandwich (119/-)
+Paneer Tikka Sandwich (139/-)
+Chicken Tikka Sandwich (139/-)
+Friend Café Spl. Sandwich (159/-)
+Egg Chicken Sandwich (159/-)
+Friend Special Chicken Sandwich (179/-)
+
+BURGER
+
+Potato Patty Burger (59/-)
+Veggie Lover Burger (69/-)
+Mushroom Mix Burger (89/-)
+All American Veg Burger (109/-)
+Chunky Chicken Burger (109/-)
+Cheese Burger (119/-)
+All American Jumbo Burger (129/-)
+
+FRIES
+
+Classic Fries (89/-)
+Peri Peri Fries (109/-)
+Cheese Fries (119/-)
+American Chipatla (149/-)
+
+GARLIC BREAD
+
+Cheese Garlic Breads (109/-)
+Stuffed Garlic Breads (149/-)
+Chicken Stuffed Garlic Breads (169/-)
+Chicken Garlic Breads (169/-)
+
+WRAPS
+
+Veg Warp (69/-)
+Paneer Wrap (79/-)
+Chicken Tikka Wrap (99/-)
+Friends Café Spl. Chicken Mix Wrap (139/-)
+
+AMERICAN FRY
+
+Chicken Chicken Popcorn (250gm) (179/-)
+Chicken Strips (250gm) (209/-)
+American Chicken (1kg) (599/-)
+
+FISH
+
+Fish & Chips (259/-)
+Fish Popcorn (279/-)
+
+SPECIAL COMBO PACK
+
+Burger + Coke + Fries (Veg: 119/-, Non-Veg: 139/-)
+
+The menu also mentions:
+
+Home Delivery Available
+Veg & Non-Veg Thali Available
+"Didn't Get Bill For Your Food Have It For Free"
+Contact: +91 62396-53865
+Location: Shop No.: 12, University View Estate Vill. Meheru, Phagwara
