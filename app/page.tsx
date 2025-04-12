@@ -1,5 +1,4 @@
 import { Menu } from "@/components/menu"
-import { Contact } from "@/components/contact"
 import { About } from "@/components/about"
 import { Hero } from "@/components/hero"
 import { Header } from "@/components/header"
@@ -12,7 +11,6 @@ export default function Home() {
       <Hero />
       <Menu />
       <About />
-      <Contact />
       <Footer />
     </main>
   )

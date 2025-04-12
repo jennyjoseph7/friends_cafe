@@ -124,18 +124,18 @@ export const menuData = {
     },
     {
       name: "Paneer Rice Bowl",
-      price: "109",
+      price: "99",
       description: "Rice bowl with cottage cheese cubes",
       isVeg: true,
       image: "/placeholder.svg?height=300&width=400&text=Paneer+Rice+Bowl",
     },
     {
-      name: "Seshzewen Rice Bowl",
+      name: "Szehezwen Rice Bowl",
       price: "109",
       description: "Rice bowl with Schezwan sauce and vegetables",
       isVeg: true,
       isSpicy: true,
-      image: "/placeholder.svg?height=300&width=400&text=Seshzewen+Rice+Bowl",
+      image: "/placeholder.svg?height=300&width=400&text=Szehezwen+Rice+Bowl",
     },
   ],
   "Rice Bowl": [
@@ -191,11 +191,11 @@ export const menuData = {
       image: "/placeholder.svg?height=300&width=400&text=Yellow+Dal+Tadka",
     },
     {
-      name: "Veg Yam",
+      name: "Mix Veg.",
       price: "99",
       description: "Mixed vegetable curry",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Veg+Yam",
+      image: "/placeholder.svg?height=300&width=400&text=Mix+Veg",
     },
     {
       name: "Aloo Jeera",
@@ -418,7 +418,7 @@ export const menuData = {
     },
     {
       name: "Butter Roti",
-      price: "15",
+      price: "20",
       description: "Traditional Indian flatbread topped with butter",
       isVeg: true,
       image: "/placeholder.svg?height=300&width=400&text=Butter+Roti",
@@ -579,42 +579,42 @@ export const menuData = {
       price: "69",
       description: "Pizza topped with onions and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Onion+Pizza",
+      image: "/images/onion pizza.jpeg",
     },
     {
       name: "Capsicum Pizza",
       price: "79",
       description: "Pizza topped with bell peppers and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Capsicum+Pizza",
+      image: "/images/capsicum pizza.jpeg",
     },
     {
       name: "Sweet Corn Pizza",
       price: "79",
       description: "Pizza topped with sweet corn kernels and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Sweet+Corn+Pizza",
+      image: "/images/corn pizza.jpeg",
     },
     {
       name: "Tomato Pizza",
       price: "79",
       description: "Pizza topped with fresh tomatoes and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Tomato+Pizza",
+      image: "/images/tomato pizza.jpeg",
     },
     {
       name: "Olive Pizza",
       price: "89",
       description: "Pizza topped with olives and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Olive+Pizza",
+      image: "/images/olive pizza.jpeg",
     },
     {
       name: "Paneer Pizza",
       price: "99",
       description: "Pizza topped with cottage cheese and vegetables",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Paneer+Pizza",
+      image: "/images/panner pizza.webp",
     },
   ],
   "Double Pizza": [
@@ -623,38 +623,708 @@ export const menuData = {
       price: "89",
       description: "Pizza topped with onions, bell peppers, and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Onion+Capsicum+Pizza",
+      image: "/images/Onion & Capsicum Pizza.jpeg",
     },
     {
       name: "Onion Corn Pizza",
       price: "89",
       description: "Pizza topped with onions, corn, and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Onion+Corn+Pizza",
+      image: "/images/Onion Corn Pizza.jpeg",
     },
     {
       name: "Onion Jalapeno Pizza",
-      price: "89",
+      price: "99",
       description: "Pizza topped with onions, jalapenos, and cheese",
       isVeg: true,
       isSpicy: true,
-      image: "/placeholder.svg?height=300&width=400&text=Onion+Jalapeno+Pizza",
+      image: "/images/Onion Jalapeno Pizza.jpeg",
     },
     {
       name: "Corn Tomato Pizza",
-      price: "99",
+      price: "89",
       description: "Pizza topped with corn, tomatoes, and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Corn+Tomato+Pizza",
+      image: "/images/Corn Tomato Pizza.jpeg",
     },
     {
       name: "Corn Paneer Pizza",
-      price: "109",
+      price: "99",
       description: "Pizza topped with corn, cottage cheese, and cheese",
       isVeg: true,
-      image: "/placeholder.svg?height=300&width=400&text=Corn+Paneer+Pizza",
+      image: "/images/Corn Paneer Pizza.jpeg",
     },
     {
       name: "Paneer & Capsicum Pizza",
       price: "109",
-      description: "Pizza toppe
+      description: "Pizza topped with cottage cheese, bell peppers, and cheese",
+      isVeg: true,
+      image: "/images/Paneer & Capsicum Pizza.jpeg",
+    },
+    {
+      name: "Jalapeno Pineapple Pizza",
+      price: "109",
+      description: "Pizza topped with jalapenos, pineapple, and cheese",
+      isVeg: true,
+      isSpicy: true,
+      image: "/images/Jalapeno Pineapple Pizza.jpeg",
+    },
+  ],
+  Pizza: {
+    "Veg Pizza": [
+      {
+        name: "Margherita Pizza",
+        price: {
+          small: "99",
+          medium: "155",
+          large: "259"
+        },
+        description: "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Margherita+Pizza",
+      },
+      {
+        name: "Garden Delight Pizza",
+        price: {
+          small: "99",
+          medium: "209",
+          large: "309"
+        },
+        description: "Pizza topped with assorted garden vegetables",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Garden+Delight+Pizza",
+      },
+      {
+        name: "Loverbite Pizza",
+        price: {
+          small: "99",
+          medium: "199",
+          large: "309"
+        },
+        description: "Special pizza with a delightful mix of vegetables",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Loverbite+Pizza",
+      },
+      {
+        name: "Veg. Hawaiian Pizza",
+        price: {
+          small: "119",
+          medium: "219",
+          large: "319"
+        },
+        description: "Pizza topped with pineapple and vegetables",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Veg+Hawaiian+Pizza",
+      },
+      {
+        name: "Cheese & Tomato Pizza",
+        price: {
+          small: "129",
+          medium: "209",
+          large: "319"
+        },
+        description: "Pizza with extra cheese and fresh tomatoes",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Cheese+Tomato+Pizza",
+      },
+      {
+        name: "Double Cheese Margherita Pizza",
+        price: {
+          small: "129",
+          medium: "209",
+          large: "319"
+        },
+        description: "Margherita pizza with double the cheese",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Double+Cheese+Margherita+Pizza",
+      },
+      {
+        name: "Cheese & Mushroom Pizza",
+        price: {
+          small: "129",
+          medium: "209",
+          large: "319"
+        },
+        description: "Pizza with cheese and fresh mushrooms",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Cheese+Mushroom+Pizza",
+      },
+      {
+        name: "Farmhouse Pizza",
+        price: {
+          small: "149",
+          medium: "259",
+          large: "339"
+        },
+        description: "Pizza topped with onions, capsicum, tomatoes, and mushrooms",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Farmhouse+Pizza",
+      },
+      {
+        name: "Spicy Achari Pizza",
+        price: {
+          small: "169",
+          medium: "279",
+          large: "369"
+        },
+        description: "Pizza with spicy pickle flavors",
+        isVeg: true,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Spicy+Achari+Pizza",
+      },
+      {
+        name: "Veggie Feast Pizza",
+        price: {
+          small: "169",
+          medium: "279",
+          large: "369"
+        },
+        description: "Pizza loaded with a variety of vegetables",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Veggie+Feast+Pizza",
+      },
+      {
+        name: "Fire In Hole Veg Pizza",
+        price: {
+          small: "169",
+          medium: "279",
+          large: "369"
+        },
+        description: "Spicy pizza with fiery vegetable toppings",
+        isVeg: true,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Fire+In+Hole+Veg+Pizza",
+      },
+      {
+        name: "Peri Peri Veg Pizza",
+        price: {
+          small: "179",
+          medium: "289",
+          large: "379"
+        },
+        description: "Pizza with peri peri spice and vegetable toppings",
+        isVeg: true,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Peri+Peri+Veg+Pizza",
+      },
+      {
+        name: "English Veggie Pizza",
+        price: {
+          small: "179",
+          medium: "289",
+          large: "389"
+        },
+        description: "Pizza with English-style vegetable toppings",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=English+Veggie+Pizza",
+      },
+      {
+        name: "Paneer Makhani Pizza",
+        price: {
+          small: "189",
+          medium: "309",
+          large: "389"
+        },
+        description: "Pizza with butter paneer topping",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Paneer+Makhani+Pizza",
+      },
+      {
+        name: "Mexican Style Veg Pizza",
+        price: {
+          small: "199",
+          medium: "309",
+          large: "399"
+        },
+        description: "Pizza with Mexican-inspired vegetable toppings",
+        isVeg: true,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Mexican+Style+Veg+Pizza",
+      },
+      {
+        name: "Love Affairs Veg. Pizza",
+        price: {
+          small: "209",
+          medium: "319",
+          large: "409"
+        },
+        description: "Special vegetarian pizza with premium toppings",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Love+Affairs+Veg+Pizza",
+      },
+      {
+        name: "Veg Delux Pizza",
+        price: {
+          small: "209",
+          medium: "319",
+          large: "429"
+        },
+        description: "Deluxe pizza with premium vegetable toppings",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=Veg+Delux+Pizza",
+      },
+      {
+        name: "The Friends Overloaded Pizza",
+        price: {
+          small: "209",
+          medium: "329",
+          large: "439"
+        },
+        description: "Ultimate vegetarian pizza loaded with all toppings",
+        isVeg: true,
+        image: "/placeholder.svg?height=300&width=400&text=The+Friends+Overloaded+Pizza",
+      },
+    ],
+    "Non-Veg Pizza": [
+      {
+        name: "Classic Chicken Pizza",
+        price: {
+          small: "109",
+          medium: "219",
+          large: "269"
+        },
+        description: "Pizza topped with classic chicken pieces",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=Classic+Chicken+Pizza",
+      },
+      {
+        name: "Hawaiian Pizza",
+        price: {
+          small: "109",
+          medium: "219",
+          large: "279"
+        },
+        description: "Pizza topped with ham, pineapple, and cheese",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=Hawaiian+Pizza",
+      },
+      {
+        name: "Peri Peri Chicken Pizza",
+        price: {
+          small: "109",
+          medium: "189",
+          large: "299"
+        },
+        description: "Pizza with peri peri spiced chicken",
+        isVeg: false,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Peri+Peri+Chicken+Pizza",
+      },
+      {
+        name: "Smoky Spicy Chicken Pizza",
+        price: {
+          small: "119",
+          medium: "209",
+          large: "299"
+        },
+        description: "Pizza with smoky, spicy chicken toppings",
+        isVeg: false,
+        isSpicy: true,
+        image: "/placeholder.svg?height=300&width=400&text=Smoky+Spicy+Chicken+Pizza",
+      },
+      {
+        name: "BBQ Chicken Pizza",
+        price: {
+          small: "119",
+          medium: "189",
+          large: "319"
+        },
+        description: "Pizza topped with BBQ sauce and chicken",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=BBQ+Chicken+Pizza",
+      },
+      {
+        name: "Italian Style Pizza",
+        price: {
+          small: "129",
+          medium: "209",
+          large: "339"
+        },
+        description: "Pizza with Italian-style chicken toppings",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=Italian+Style+Pizza",
+      },
+      {
+        name: "Exotic Chicken Pizza",
+        price: {
+          small: "139",
+          medium: "219",
+          large: "349"
+        },
+        description: "Pizza with exotic chicken toppings",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=Exotic+Chicken+Pizza",
+      },
+      {
+        name: "Pepperoni Lover Pizza",
+        price: {
+          small: "149",
+          medium: "279",
+          large: "369"
+        },
+        description: "Pizza loaded with pepperoni slices",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=Pepperoni+Lover+Pizza",
+      },
+      {
+        name: "The Overload Non Veg Pizza",
+        price: {
+          small: "179",
+          medium: "299",
+          large: "479"
+        },
+        description: "Ultimate non-vegetarian pizza loaded with all meat toppings",
+        isVeg: false,
+        image: "/placeholder.svg?height=300&width=400&text=The+Overload+Non+Veg+Pizza",
+      },
+    ],
+  },
+  "Non-Veg Main Course": [
+    {
+      name: "Egg Curry",
+      price: "99",
+      description: "Boiled eggs in a spicy tomato-based gravy",
+      isVeg: false,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Egg+Curry",
+    },
+    {
+      name: "Chicken Do Pyaza",
+      price: "199",
+      description: "Chicken cooked with extra onions in a rich gravy",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Do+Pyaza",
+    },
+    {
+      name: "Butter Chicken",
+      price: "199",
+      description: "Tandoori chicken in a rich buttery tomato sauce",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Butter+Chicken",
+    },
+    {
+      name: "Boneless Butter Chicken",
+      price: "209",
+      description: "Boneless chicken in a rich buttery tomato sauce",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Boneless+Butter+Chicken",
+    },
+    {
+      name: "Chicken Tikka Masala",
+      price: "209",
+      description: "Grilled chicken pieces in a spicy tomato-based sauce",
+      isVeg: false,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Tikka+Masala",
+    },
+    {
+      name: "Kadai Chicken Bonless",
+      price: "199",
+      description: "Boneless chicken cooked with bell peppers in a spicy gravy",
+      isVeg: false,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Kadai+Chicken+Bonless",
+    },
+    {
+      name: "Kadai Chicken",
+      price: "209",
+      description: "Chicken with bones cooked with bell peppers in a spicy gravy",
+      isVeg: false,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Kadai+Chicken",
+    },
+    {
+      name: "Chicken Korma",
+      price: "219",
+      description: "Chicken in a rich, creamy sauce with nuts and spices",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Korma",
+    },
+    {
+      name: "Bara Chicken",
+      price: "229",
+      description: "Special chicken curry with extra spices",
+      isVeg: false,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Bara+Chicken",
+    },
+  ],
+  "Pasta": [
+    {
+      name: "Veg Pasta",
+      price: "149",
+      description: "Pasta cooked with mixed vegetables in creamy sauce",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Veg+Pasta",
+    },
+    {
+      name: "Mix Veg Pasta",
+      price: "169",
+      description: "Pasta with a variety of vegetables in special sauce",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Mix+Veg+Pasta",
+    },
+    {
+      name: "Chicken Pasta",
+      price: "199",
+      description: "Pasta cooked with chicken pieces in creamy sauce",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Pasta",
+    },
+    {
+      name: "Mix Chicken Pasta",
+      price: "219",
+      description: "Pasta with assorted chicken and vegetables in special sauce",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Mix+Chicken+Pasta",
+    },
+  ],
+  "Grilled Sandwich": [
+    {
+      name: "Veggie Sandwich",
+      price: "99",
+      description: "Grilled sandwich with mixed vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Veggie+Sandwich",
+    },
+    {
+      name: "Mushroom & Cheese Sandwich",
+      price: "119",
+      description: "Grilled sandwich with mushrooms and melted cheese",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Mushroom+Cheese+Sandwich",
+    },
+    {
+      name: "Paneer Tikka Sandwich",
+      price: "139",
+      description: "Grilled sandwich with spiced cottage cheese tikka",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Paneer+Tikka+Sandwich",
+    },
+    {
+      name: "Chicken Tikka Sandwich",
+      price: "139",
+      description: "Grilled sandwich with spiced chicken tikka",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Tikka+Sandwich",
+    },
+    {
+      name: "Friend Café Spl. Sandwich",
+      price: "159",
+      description: "Special grilled sandwich with secret ingredients",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Friend+Cafe+Spl+Sandwich",
+    },
+    {
+      name: "Egg Chicken Sandwich",
+      price: "159",
+      description: "Grilled sandwich with egg and chicken",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Egg+Chicken+Sandwich",
+    },
+    {
+      name: "Friend Special Chicken Sandwich",
+      price: "179",
+      description: "Special grilled chicken sandwich with premium ingredients",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Friend+Special+Chicken+Sandwich",
+    },
+  ],
+  "Burger": [
+    {
+      name: "Potato Patty Burger",
+      price: "59",
+      description: "Burger with spiced potato patty",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Potato+Patty+Burger",
+    },
+    {
+      name: "Veggie Lover Burger",
+      price: "69",
+      description: "Burger with vegetable patty and fresh vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Veggie+Lover+Burger",
+    },
+    {
+      name: "Mushroom Mix Burger",
+      price: "89",
+      description: "Burger with mushroom patty and vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Mushroom+Mix+Burger",
+    },
+    {
+      name: "All American Veg Burger",
+      price: "109",
+      description: "American-style vegetarian burger with special sauce",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=All+American+Veg+Burger",
+    },
+    {
+      name: "Chunky Chicken Burger",
+      price: "109",
+      description: "Burger with chunky chicken patty",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chunky+Chicken+Burger",
+    },
+    {
+      name: "Cheese Burger",
+      price: "119",
+      description: "Burger with extra cheese and vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Cheese+Burger",
+    },
+    {
+      name: "All American Jumbo Burger",
+      price: "129",
+      description: "Large American-style burger with special sauce",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=All+American+Jumbo+Burger",
+    },
+  ],
+  "Fries": [
+    {
+      name: "Classic Fries",
+      price: "89",
+      description: "Crispy golden fried potato strips",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Classic+Fries",
+    },
+    {
+      name: "Peri Peri Fries",
+      price: "109",
+      description: "Fries tossed in peri peri seasoning",
+      isVeg: true,
+      isSpicy: true,
+      image: "/placeholder.svg?height=300&width=400&text=Peri+Peri+Fries",
+    },
+    {
+      name: "Cheese Fries",
+      price: "119",
+      description: "Fries topped with melted cheese",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Cheese+Fries",
+    },
+    {
+      name: "American Chipatla",
+      price: "149",
+      description: "American-style loaded fries with special toppings",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=American+Chipatla",
+    },
+  ],
+  "Garlic Bread": [
+    {
+      name: "Cheese Garlic Breads",
+      price: "109",
+      description: "Garlic bread topped with melted cheese",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Cheese+Garlic+Breads",
+    },
+    {
+      name: "Stuffed Garlic Breads",
+      price: "149",
+      description: "Garlic bread stuffed with vegetables and cheese",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Stuffed+Garlic+Breads",
+    },
+    {
+      name: "Chicken Stuffed Garlic Breads",
+      price: "169",
+      description: "Garlic bread stuffed with chicken and cheese",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Stuffed+Garlic+Breads",
+    },
+    {
+      name: "Chicken Garlic Breads",
+      price: "169",
+      description: "Garlic bread topped with chicken and cheese",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Garlic+Breads",
+    },
+  ],
+  "Wraps": [
+    {
+      name: "Veg Wrap",
+      price: "69",
+      description: "Tortilla wrap filled with vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Veg+Wrap",
+    },
+    {
+      name: "Paneer Wrap",
+      price: "79",
+      description: "Tortilla wrap filled with cottage cheese and vegetables",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Paneer+Wrap",
+    },
+    {
+      name: "Chicken Tikka Wrap",
+      price: "99",
+      description: "Tortilla wrap filled with chicken tikka and vegetables",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Tikka+Wrap",
+    },
+    {
+      name: "Friends Café Spl. Chicken Mix Wrap",
+      price: "139",
+      description: "Special wrap with premium chicken and mixed ingredients",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Friends+Cafe+Spl+Chicken+Mix+Wrap",
+    },
+  ],
+  "American Fry": [
+    {
+      name: "Chicken Popcorn (250gm)",
+      price: "179",
+      description: "Bite-sized pieces of breaded and fried chicken",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Popcorn",
+    },
+    {
+      name: "Chicken Strips (250gm)",
+      price: "209",
+      description: "Breaded and fried chicken strips",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Chicken+Strips",
+    },
+    {
+      name: "American Chicken (1kg)",
+      price: "599",
+      description: "Large serving of American-style fried chicken",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=American+Chicken",
+    },
+  ],
+  "Fish": [
+    {
+      name: "Fish & Chips",
+      price: "259",
+      description: "Battered and fried fish served with fries",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Fish+And+Chips",
+    },
+    {
+      name: "Fish Popcorn",
+      price: "279",
+      description: "Bite-sized pieces of breaded and fried fish",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Fish+Popcorn",
+    },
+  ],
+  "Special Combo Pack": [
+    {
+      name: "Burger + Coke + Fries (Veg)",
+      price: "119",
+      description: "Combo of veg burger, coke, and fries",
+      isVeg: true,
+      image: "/placeholder.svg?height=300&width=400&text=Veg+Combo+Pack",
+    },
+    {
+      name: "Burger + Coke + Fries (Non-Veg)",
+      price: "139",
+      description: "Combo of chicken burger, coke, and fries",
+      isVeg: false,
+      image: "/placeholder.svg?height=300&width=400&text=Non+Veg+Combo+Pack",
+    },
+  ],
+}

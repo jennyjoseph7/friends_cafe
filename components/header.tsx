@@ -101,8 +101,6 @@ function NavLinks({ mobile, onClick, isLoggedIn }: { mobile?: boolean; onClick?:
   const links = [
     { href: "/#about", label: "About" },
     { href: "/#menu", label: "Menu" },
-    { href: "/#gallery", label: "Gallery" },
-    { href: "/#contact", label: "Contact" },
   ]
 
   return (

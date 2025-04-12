@@ -1,8 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
 
 export function Hero() {
+  const router = useRouter();
+  
   return (
     <section id="home" className="relative h-[80vh] flex items-center">
       <div
@@ -29,7 +32,7 @@ export function Hero() {
             size="lg"
             variant="outline"
             className="bg-transparent border-white text-white hover:bg-white hover:text-red-600"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => router.push('/cart')}
           >
             Order Now
           </Button>
