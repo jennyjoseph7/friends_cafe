@@ -64,14 +64,14 @@ export function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
                 <span className="text-gray-600">
-                  123 Cafe Street, Food District<br />
-                  Mumbai, Maharashtra 400001
+                  Shop No 12, University View Estate Village,<br />
+                  Meheru, Phagwara
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-red-600 mr-2 flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-600 hover:text-red-600">
-                  +91 9876 543 210
+                <a href="tel:+916239653865" className="text-gray-600 hover:text-red-600">
+                  +91 62396-53865
                 </a>
               </li>
               <li className="flex items-center">

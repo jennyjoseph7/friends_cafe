@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { CartProvider } from '@/hooks/use-cart'
+import { AuthProvider } from '@/hooks/use-auth'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
@@ -24,9 +25,11 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="friends-cafe-theme"
         >
-          <CartProvider>
-            {children}
-          </CartProvider>
+          <AuthProvider>
+            <CartProvider>
+              {children}
+            </CartProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

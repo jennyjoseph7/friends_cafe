@@ -1,7 +1,9 @@
 "use client"
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from "react"
 import { toast } from "./use-toast"
+import { useAuth } from "./use-auth"
+import { saveUserSessionItem, getUserSessionItem } from "@/lib/session-storage"
 
 export interface CartItem {
   id: string
@@ -58,6 +60,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [deliveryFee, setDeliveryFee] = useState(30) // Default delivery fee
   const [isFreeDelivery, setIsFreeDelivery] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const { user, isAuthenticated } = useAuth()
   
   // Calculate final total including delivery fee and box fees
   const finalTotal = totalPrice + deliveryFee + boxFees
@@ -65,6 +68,16 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   // Set mounted state on client side
   useEffect(() => {
     setMounted(true)
+  }, [])
+  
+  // Reset cart state completely
+  const resetCartState = useCallback(() => {
+    setCart([])
+    setTotalItems(0)
+    setTotalPrice(0)
+    setBoxFees(0)
+    setDeliveryFee(30)
+    setIsFreeDelivery(false)
   }, [])
   
   // Update delivery fee based on cart total
@@ -78,53 +91,52 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [totalPrice])
   
-  // Load initial cart from localStorage only after mounting
+  // Load cart data when authentication state changes
   useEffect(() => {
     if (mounted && typeof window !== 'undefined') {
-      try {
-        const savedCart = localStorage.getItem('friendsCafeCart')
-        if (savedCart) {
-          const parsedCart = JSON.parse(savedCart)
-          setCart(parsedCart)
+      // Reset cart state first to avoid mixing data
+      resetCartState()
+      
+      if (isAuthenticated && user) {
+        try {
+          // If logged in, load user-specific cart data
+          const sessionCart = getUserSessionItem<CartItem[]>(user.phone, 'cart')
           
-          // Calculate totals directly here to avoid delays
-          const itemsTotal = parsedCart.reduce((sum: number, item: CartItem) => sum + item.quantity, 0)
-          const priceTotal = parsedCart.reduce((sum: number, item: CartItem) => sum + (item.price * item.quantity), 0)
-          
-          setTotalItems(itemsTotal)
-          setTotalPrice(priceTotal)
-          
-          // Calculate box fees (10 rupees per pizza item)
-          setBoxFees(parsedCart.reduce((sum: number, item: CartItem) => {
-            if (item.name.toLowerCase().includes('pizza') || (item.category && item.category.toLowerCase().includes('pizza'))) {
-              return sum + (10 * item.quantity)
-            }
-            return sum
-          }, 0))
-          
-          // Set delivery fee based on total price
-          if (priceTotal >= FREE_DELIVERY_THRESHOLD) {
-            setDeliveryFee(0)
-            setIsFreeDelivery(true)
+          if (sessionCart && sessionCart.length > 0) {
+            setCart(sessionCart)
           } else {
-            setDeliveryFee(30)
-            setIsFreeDelivery(false)
+            // If no session data, check for legacy cart data
+            const legacyCart = localStorage.getItem(`friendsCafe_cart_${user.id}`)
+            if (legacyCart) {
+              const parsedCart = JSON.parse(legacyCart)
+              setCart(parsedCart)
+              
+              // Migrate to session storage
+              saveUserSessionItem(user.phone, 'cart', parsedCart)
+            }
           }
+        } catch (error) {
+          console.error('Failed to load user cart:', error)
         }
-      } catch (error) {
-        console.error('Failed to load cart from localStorage:', error)
+      } else {
+        // For guest users, load guest cart
+        try {
+          const guestCart = localStorage.getItem('friendsCafe_cart_guest')
+          if (guestCart) {
+            setCart(JSON.parse(guestCart))
+          }
+        } catch (error) {
+          console.error('Failed to load guest cart:', error)
+        }
       }
     }
-  }, [mounted])
+  }, [mounted, isAuthenticated, user, resetCartState])
   
-  // Update localStorage and totals when cart changes
+  // Update cart totals whenever cart changes
   useEffect(() => {
     if (mounted && typeof window !== 'undefined') {
       try {
-        // Save to localStorage
-        localStorage.setItem('friendsCafeCart', JSON.stringify(cart))
-        
-        // Update totals
+        // Calculate totals
         const itemsTotal = cart.reduce((sum, item) => sum + item.quantity, 0)
         const priceTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
         
@@ -138,11 +150,23 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           }
           return sum
         }, 0))
+        
+        // If user is authenticated, save to session storage
+        if (isAuthenticated && user) {
+          saveUserSessionItem(user.phone, 'cart', cart)
+          
+          // Also update local storage with the same data
+          // This helps with backward compatibility
+          localStorage.setItem(`friendsCafe_cart_${user.id}`, JSON.stringify(cart))
+        } else {
+          // Save guest cart
+          localStorage.setItem('friendsCafe_cart_guest', JSON.stringify(cart))
+        }
       } catch (error) {
-        console.error('Failed to save cart to localStorage:', error)
+        console.error('Failed to save cart:', error)
       }
     }
-  }, [cart, mounted])
+  }, [cart, mounted, user, isAuthenticated])
   
   const addToCart = (newItem: CartItem) => {
     if (!mounted) return
@@ -209,7 +233,16 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const clearCart = () => {
     if (!mounted) return
     
-    setCart([])
+    resetCartState()
+    
+    // Clear the appropriate storage based on auth state
+    if (isAuthenticated && user) {
+      saveUserSessionItem(user.phone, 'cart', [])
+      localStorage.removeItem(`friendsCafe_cart_${user.id}`)
+    } else {
+      localStorage.removeItem('friendsCafe_cart_guest')
+    }
+    
     toast({
       title: "Cart cleared",
       description: "All items have been removed from your cart",

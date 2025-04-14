@@ -1,18 +1,23 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { useCart } from "@/hooks/use-cart"
+import { useAuth } from "@/hooks/use-auth"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { PlusIcon, MinusIcon, TrashIcon, ArrowLeft, ShoppingBag } from "lucide-react"
+import { PlusIcon, MinusIcon, TrashIcon, ArrowLeft, ShoppingBag, UserIcon, Clock } from "lucide-react"
 import { toast } from "@/hooks/use-toast"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function CartPage() {
+  const router = useRouter()
   const { 
     cart, 
     updateQuantity, 
@@ -25,20 +30,149 @@ export default function CartPage() {
     finalTotal,
     isFreeDelivery
   } = useCart()
+  const { user, isAuthenticated, login } = useAuth()
   const [isCheckingOut, setIsCheckingOut] = useState(false)
+  const [showLoginForm, setShowLoginForm] = useState(false)
+  const [loginStep, setLoginStep] = useState<'phone' | 'otp'>('phone')
+  const [loginData, setLoginData] = useState({
+    phone: "",
+    otp: ""
+  })
+  
+  const handleLoginInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target
+    setLoginData(prev => ({
+      ...prev,
+      [id]: value
+    }))
+  }
+  
+  const handleSendOtp = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!loginData.phone) {
+      toast({
+        title: "Phone number required",
+        description: "Please enter your phone number",
+        variant: "destructive"
+      })
+      return
+    }
+    
+    // Simulate sending OTP
+    toast({
+      title: "OTP Sent!",
+      description: `An OTP has been sent to ${loginData.phone}`,
+    })
+    setLoginStep('otp')
+  }
+  
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (loginStep === 'phone') {
+      handleSendOtp(e)
+      return
+    }
+    
+    const success = await login(loginData.phone, loginData.otp)
+    if (success) {
+      setShowLoginForm(false)
+      // Cart is preserved automatically because we don't clear it on login
+      toast({
+        title: "Ready to checkout",
+        description: "You can now complete your order",
+      })
+    }
+  }
   
   const handleCheckout = () => {
-    setIsCheckingOut(true)
+    if (!isAuthenticated) {
+      setShowLoginForm(true)
+      return
+    }
     
-    // Simulate checkout process
-    setTimeout(() => {
-      toast({
-        title: "Order placed!",
-        description: "Your order has been successfully placed.",
-      })
-      clearCart()
-      setIsCheckingOut(false)
-    }, 2000)
+    router.push('/checkout')
+  }
+  
+  // Login form to show when user is not authenticated
+  const renderLoginForm = () => {
+    return (
+      <Card className="mb-8">
+        <CardHeader>
+          <CardTitle className="text-xl font-semibold">
+            {loginStep === 'phone' ? "Login to Continue" : "Verify Your Phone"}
+          </CardTitle>
+          <CardDescription>
+            {loginStep === 'phone' 
+              ? "Please login to complete your order"
+              : `Enter the OTP sent to ${loginData.phone}`}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleLogin} className="space-y-4">
+            {loginStep === 'phone' ? (
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input 
+                  id="phone" 
+                  type="tel" 
+                  placeholder="+91 98765 43210"
+                  value={loginData.phone}
+                  onChange={handleLoginInputChange}
+                  required
+                />
+              </div>
+            ) : (
+              <div className="space-y-2">
+                <Label htmlFor="otp">One-Time Password (OTP)</Label>
+                <Input 
+                  id="otp" 
+                  placeholder="Enter 4-digit OTP"
+                  value={loginData.otp}
+                  onChange={handleLoginInputChange}
+                  maxLength={4}
+                  required
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  For demo purposes, use "1234" as the OTP
+                </p>
+              </div>
+            )}
+            <div className="flex gap-3">
+              <Button 
+                type="submit" 
+                className="w-full bg-red-600 hover:bg-red-700"
+              >
+                {loginStep === 'phone' ? "Get OTP" : "Verify & Continue"}
+              </Button>
+              
+              <Button 
+                type="button" 
+                variant="outline" 
+                className="w-full"
+                onClick={() => {
+                  if (loginStep === 'otp') {
+                    setLoginStep('phone')
+                  } else {
+                    setShowLoginForm(false)
+                  }
+                }}
+              >
+                {loginStep === 'otp' ? "Back" : "Cancel"}
+              </Button>
+            </div>
+            
+            <div className="text-center mt-4">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{" "}
+                <Link href="/auth?redirect=/cart" className="text-red-600 hover:underline">
+                  Sign up
+                </Link>
+              </p>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
+    )
   }
   
   return (
@@ -64,6 +198,19 @@ export default function CartPage() {
             </div>
           ) : (
             <>
+              {showLoginForm && !isAuthenticated && renderLoginForm()}
+              
+              {isAuthenticated && (
+                <Card className="mb-8 border-green-100">
+                  <CardContent className="p-4">
+                    <div className="flex items-center text-green-600">
+                      <UserIcon className="h-5 w-5 mr-2" />
+                      <p>Logged in as {user?.username} ({user?.phone})</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+              
               <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
                 <div className="p-6 border-b">
                   <h2 className="text-lg font-semibold text-gray-800">Order Summary ({totalItems} items)</h2>
@@ -193,7 +340,7 @@ export default function CartPage() {
                     onClick={handleCheckout}
                     disabled={isCheckingOut}
                   >
-                    {isCheckingOut ? 'Processing...' : 'Checkout'}
+                    {isCheckingOut ? 'Processing...' : isAuthenticated ? 'Proceed to Checkout' : 'Login & Checkout'}
                   </Button>
                 </div>
               </div>
